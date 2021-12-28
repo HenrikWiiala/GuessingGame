@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, intial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Henrik Wiiala Guessing game</title>
+<style>
+    .arrow {
+        height: 22px;
+        width: 17px;
+        background-image: url(images/arrow.png);
+        position: absolute;
+
+        top: 0;
+        left: 0;
+        transition: ease-in-out 0.5s;
+    }
+
+    .scale {
+        height: 33px;
+        width: 300px;
+        background-image: url(images/scale.png);
+        position: relative;
+        top: 20px;
+    }
+
+    .win {
+        height: 33px; 
+        width: 178px;
+        background-image: url(images/winLose.png);
+        position: absolute;
+        transform: rotate(-20deg);
+        left: 50px;
+        top: -25px;
+
+        visibility: hidden;
+    }
+
+    .lose {
+        height: 33px; 
+        width: 178px;
+        background-image: url(images/winLose.png);
+        background-position: 0 -33px;
+        position: absolute;
+        transform: rotate(-20deg);
+        left: 50px;
+        top: -25px;
+
+        visibility: hidden;
+    }
+</style>
+</head>
+<body>
+<p id="output">Guess a number between 1 - 100</p>
+<input type="text" name="input" id="input" placeholder="Input number here">
+<button>Guess</button>
+<div class="scale" id="scale">
+    <div class="arrow" id="arrow"></div>
+    <div class="win" id="win"></div>
+    <div class="lose" id="lose"></div>
+</div>
+
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
